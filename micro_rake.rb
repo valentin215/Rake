@@ -4,6 +4,33 @@
 
 TASKS = {}
 
+# TASKS should look like this:
+#
+# {"third_task"=>
+#   #<Task:0x00007fc9268d30c8
+#    @action=
+#     #<Proc:0x00007fc9268d30f0>,
+#    @deps=["first_task", "second_task"],
+#    @name="third_task">,
+#  "first_task"=>
+#   #<Task:0x00007fc9268d2f88
+#    @action=
+#     #<Proc:0x00007fc9268d3000>,
+#    @deps=["before_task"],
+#    @name="first_task">,
+#  "second_task"=>
+#   #<Task:0x00007fc9268d2e98
+#    @action=
+#     #<Proc:0x00007fc9268d2ec0>,
+#    @deps=["before_task"],
+#    @name="second_task">,
+#  "before_task"=>
+#   #<Task:0x00007fc9268d2df8
+#    @action=
+#     #<Proc:0x00007fc9268d2e20>,
+#    @deps=[],
+#    @name="before_task">}
+
 # Task class
 class Task
   def initialize(name, deps, action)
